@@ -44,7 +44,10 @@ def fortune_teller():
     fortune_lines = ["One day, you will die", "Your parents never told you that you were an accident.",
                      "You will get sex.", "You will die a virgin", "Your mom will learn the blessing that is my penis.",
                      "Your sister is hot.", "One day, you will finally stop wetting the bed.",
-                     "I'll see you later... tonight."]
+                     "I'll see you later... tonight.", "That girl you're interested in? She thinks you're gay.",
+                     "I'm going to do things to your dad that will make him leave your mom.",
+                     "There's a bottle of hand lotion waiting for you tonight.",
+                     "Stop masterbating so much. The frequency is disturbing.", "So much furry porn. So...so much."]
 
     random_fortune = random.choice(fortune_lines)
     return random_fortune
@@ -84,14 +87,16 @@ def main():
         print(answers())
 
         time.sleep(2)
-        print("\nYour lucky number was", user_number, "Here's your fortune: {}".format(fortune_teller()))
+        print("\nYour lucky number was", user_number, ". Here's your fortune:".format(user_number))
+        time.sleep(2)
+        print(fortune_teller())
 
         time.sleep(3)
         print("\nHave a nice day :)")
 
         time.sleep(3)
 
-        repeat = input("Oh. you're still here? \nType any key if you want to continue. Type 'N' if you want to stop: ")
+        repeat = input("\nOh. you're still here? \nType any key if you want to continue. Type 'N' if you want to stop: ")
         if repeat.lower() != "n":
             continue
         else:
