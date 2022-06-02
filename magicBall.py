@@ -9,12 +9,12 @@ def answers():
                    "All work and no play make Jack a dull boy... what was the question?",
                    "Google says....yes.", "Google says....no.",
                    "I don't think that's a good idea Dave, or whatever the hell your name is.",
-                   "Does the pope shit in the woods?", "My Magic8 Ball says... 'Try again later'??? Goddamnit.",
+                   "Does the pope shit in the woods?", "My own Magic8Ball says... 'Try again later'??? Goddamnit.",
                    "It's not a good idea but will make a great story later.", "Do it, you know you want to.",
                    "Seriously, if you're asking me, you already made up your mind. Just do it already",
                    "Try again later, I'm drunk.", "Try again later, you're drunk.",
                    "This is one of those things where it's better to ask a lawyer first",
-                   "Sorry, to busy banging your mom to answer now.", "Sigh. Can you just ask your mother?",
+                   "Sorry, too busy banging your mom to answer now.", "Sigh. Can you just ask your mother?",
                    "Don't do it. Seriously, I knew a guy who did it and he's got cancer." 
                    "Hmmm, not too sure. Yeah screw it. Why not?",
                    "Are you really that fucking stupid? Of course it's a bad idea.",
@@ -25,7 +25,7 @@ def answers():
 
 
 def openers():
-    opening_lines = ["would you like to try our jalapeño poppers?", "are you happy with your current insurance?",
+    opening_lines = ["would you like to try our Jalapeño Poppers?", "are you happy with your current insurance?",
                      "please fucking kill me.", "home of the Whopper... in my pants.", "hey gorgeous."
                      "I like big butts and I cannot lie.", "would you like fries with that?",
                      "have you tried turning it off and on again?", "we've got fun and games.",
@@ -41,8 +41,8 @@ def openers():
 
 
 def fortune_teller():
-    fortune_lines = ["One day, you will die", "Your parents never told you that you were an accident.",
-                     "You will get sex.", "You will die a virgin", "Your mom will learn the blessing that is my penis.",
+    fortune_lines = ["One day, you will die.", "Your parents never told you that you were an accident.",
+                     "You will get sex.", "You will die a virgin.", "Your mom will learn the blessing that is my penis.",
                      "Your sister is hot.", "One day, you will finally stop wetting the bed.",
                      "I'll see you later... tonight.", "That girl you're interested in? She thinks you're gay.",
                      "I'm going to do things to your dad that will make him leave your mom.",
@@ -55,22 +55,23 @@ def fortune_teller():
 
 def main():
 
-    print("Welcome to Magic8 Ball, {}".format(openers()))
+    print("Welcome to Magic8Ball, {}".format(openers()))
 
     time.sleep(1.5)
 
     user_name = input("\nOh, sorry. What I meant was... What's your name? ")
 
     while True:
-        try:
-            user_number = int(input("\nAlright, {}. Give me a number. "
+        while True:
+            try:
+                user_number = int(input("\nAlright, {}. Give me a number. "
                                     "I'm going to use it to tell your fortune later: ".format(user_name)))
-        except ValueError:
-            print("I need a number, dumb-dumb. Try it again.")
-        else:
-            break
+            except ValueError:
+                print("I need a number, dumb-dumb. Try it again.")
+            else:
+                break
 
-    while True:
+
         user_question = input("\nSo {}. What's your question? ".format(user_name))
 
         print("\n\nOK. Here we go...")
@@ -82,12 +83,12 @@ def main():
             i = i + 1
 
         time.sleep(1)
-        print("\nThe answer to {} is:".format(user_question))
+        print("\nThe answer to '{}' is:".format(user_question))
         time.sleep(3)
         print(answers())
 
         time.sleep(2)
-        print("\nYour lucky number was", user_number, ". Here's your fortune:".format(user_number))
+        print("\nYour lucky number was", user_number, "\nHere's your fortune:".format(user_number))
         time.sleep(2)
         print(fortune_teller())
 
