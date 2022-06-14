@@ -15,7 +15,7 @@ def answers():
                    "Try again later, I'm drunk.", "Try again later, you're drunk.",
                    "This is one of those things where it's better to ask a lawyer first",
                    "Sorry, too busy banging your mom to answer now.", "Sigh. Can you just ask your mother?",
-                   "Don't do it. Seriously, I knew a guy who did it and he's got cancer." 
+                   "Don't do it. Seriously, I knew a guy who did it and he's got cancer.", 
                    "Hmmm, not too sure. Yeah screw it. Why not?",
                    "Are you really that fucking stupid? Of course it's a bad idea.",
                    "Two words: killer bees. That's what is waiting for you."]
@@ -55,7 +55,7 @@ def fortune_teller():
 
 def main():
 
-    print("Welcome to Magic8Ball, {}".format(openers()))
+    print("\nWelcome to Magic8Ball, {}".format(openers()))
 
     time.sleep(1.5)
 
@@ -72,7 +72,7 @@ def main():
                 break
 
 
-        user_question = input("\nSo {}. What's your question? ".format(user_name))
+        user_question = input("\nSo, {}. What's your question? ".format(user_name))
 
         print("\n\nOK. Here we go...")
 
